@@ -58,17 +58,35 @@ Load this skill when the user asks to:
 - Practical/required practical (method, variables, results analysis, evaluation)
 - Essay (A-level only: synoptic, evaluate models/theories)
 
-## Process
+## Required format
 
-### Step 1: Clarify requirements
+Worksheets ALWAYS use this structure:
 
-Ask the user for:
-- **Subject:** Chemistry, Biology, Physics, or Combined Science
-- **Level:** GCSE / iGCSE / A-level
-- **Exam board:** AQA / Edexcel / OCR / CIE (affects style and wording)
-- **Topic(s):** specific topic(s) to cover (e.g. "Newton's Third Law", "Bonding", "Photosynthesis")
-- **Student name:** if personalised (optional)
-- **Format:** plain text / markdown (default: markdown)
+### Section 1: Key Information
+
+Bullet points only. Include:
+- Keywords and definitions the student needs to know
+- Simple, minimal explanations
+- Key equations/formulae (where applicable)
+- No paragraphs, no prose
+
+### Section 2: 10 Easy Questions
+
+Test basic recall and knowledge. One mark each unless stated.
+
+### Section 3: 10 Medium Questions
+
+Based on standard exam-style questions. 2-3 marks each.
+
+### Section 4: 10 Hard Questions
+
+Based on the most common questions students get wrong. 3-6 marks each. These should target known pitfalls and misconceptions.
+
+### Rules
+- **No images, diagrams, graphs, or tables** -- text only
+- **No mark scheme section** -- answers inline after each question in brackets or after a separator
+- **UK English** spellings throughout
+- **Minimal explanations** -- keywords and bullet points only for the key info section
 
 If the user provides a syllabus specification point (e.g. "AQA 3.1.2 Amount of substance"), use it to target the questions precisely.
 
