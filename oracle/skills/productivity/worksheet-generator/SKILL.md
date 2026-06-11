@@ -23,9 +23,9 @@ Load this skill when the user asks to:
 
 | Level | Subjects | Typical question types |
 |-------|----------|----------------------|
-| GCSE | Chemistry, Biology, Combined Science | Multiple choice, 1-2 mark short answer, 3-4 mark explain, 5-6 mark extended response |
+| GCSE | Chemistry, Biology, Physics, Combined Science | Multiple choice, 1-2 mark short answer, 3-4 mark explain, 5-6 mark extended response |
 | A-level | Chemistry, Biology | Multiple choice, short answer, calculation, 3-4 mark explain, 5-6 mark analyse/evaluate, essay (Biology) |
-| iGCSE | Chemistry, Biology, Coordinated Science | Same as GCSE with slight rubric differences |
+| iGCSE | Chemistry, Biology, Physics, Coordinated Science | Same as GCSE with slight rubric differences |
 
 ## Question types by subject
 
@@ -48,19 +48,27 @@ Load this skill when the user asks to:
 - Essay (A-level only: synoptic essays)
 - Calculations (magnification, percentage change, Hardy-Weinberg, chi-squared)
 
+### Physics (both GCSE and A-level)
+- Multiple choice (recall, formulae, concepts)
+- Short answer (definitions, laws, explanations)
+- Calculation (forces, energy, waves, electricity, magnetism, density, pressure)
+- Equation manipulation (rearranging, converting units)
+- Drawing/describing (circuit diagrams, ray diagrams, free-body force diagrams, field lines)
+- Describe/explain (observations, phenomena, experiments)
+- Practical/required practical (method, variables, results analysis, evaluation)
+- Essay (A-level only: synoptic, evaluate models/theories)
+
 ## Process
 
 ### Step 1: Clarify requirements
 
 Ask the user for:
-- **Subject:** Chemistry, Biology, or Combined Science
+- **Subject:** Chemistry, Biology, Physics, or Combined Science
 - **Level:** GCSE / iGCSE / A-level
 - **Exam board:** AQA / Edexcel / OCR / CIE (affects style and wording)
-- **Topic(s):** specific topic(s) to cover
-- **Question count:** how many questions (default: 8-10)
-- **Duration:** suggested time (optional)
+- **Topic(s):** specific topic(s) to cover (e.g. "Newton's Third Law", "Bonding", "Photosynthesis")
 - **Student name:** if personalised (optional)
-- **Format:** plain text / markdown / LaTeX (default: markdown)
+- **Format:** plain text / markdown (default: markdown)
 
 If the user provides a syllabus specification point (e.g. "AQA 3.1.2 Amount of substance"), use it to target the questions precisely.
 
@@ -143,11 +151,12 @@ Also offer to convert to PDF if the user requests it (can be done via pandoc or 
 
 ## Pitfalls
 
-- **Don't use American spellings/terminology** (color/colorless, aluminum, math) -- use UK exam conventions
+- **Don't use American spellings/terminology** ("color", "aluminum", "math", "meter") -- use UK conventions ("colour", "aluminium", "maths", "metre")
 - **Don't exceed the typical paper difficulty** -- GCSE questions should not require A-level knowledge
-- **Don't forget significant figures** in calculation questions (specify: give your answer to 2 decimal places / 3 significant figures)
-- **Use the correct units** -- kJ mol^-1, cm^3, dm^3, etc.
-- **Balanced equations must be balanced** -- double-check atom and charge conservation
+- **Significant figures and units** -- always specify the required precision and check units are correct (N, J, m/s, m/s^2, kg, etc.)
+- **Equations must be correct** -- double-check formulae and rearrangements
+- **Contexts must be physically realistic** -- avoid frictionless surfaces unless specified, unrealistically large forces, or impossible scenarios
+- **Diagrams must be physically accurate** -- force arrows, field lines, ray diagrams should follow conventions (arrows show direction, vector lengths proportional)
 
 ## Verification
 
