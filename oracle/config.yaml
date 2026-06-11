@@ -1,0 +1,112 @@
+# Oracle (Hermes Agent) Configuration
+# =========================================
+# Redacted for public distribution.
+# Replace placeholder values with your own credentials.
+
+# Default model provider
+model:
+  default: deepseek/deepseek-v4-flash
+  provider: openrouter
+  base_url: https://openrouter.ai/api/v1
+  api_mode: chat_completions
+
+# Agent behaviour
+agent:
+  max_turns: 150
+  gateway_timeout: 1800
+  tool_use_enforcement: auto
+  task_completion_guidance: true
+  environment_probe: true
+  reasoning_effort: medium
+  image_input_mode: auto
+
+# Approvals - OFF for Oracle (full bypass)
+approvals:
+  mode: false
+  timeout: 60
+  cron_mode: deny
+
+# Terminal
+terminal:
+  backend: local
+  timeout: 180
+  auto_source_bashrc: true
+
+# Web search
+web:
+  backend: tavily
+
+# Browser
+browser:
+  inactivity_timeout: 120
+  engine: auto
+
+# Delegation
+delegation:
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: true
+  child_timeout_seconds: 600
+
+# Memory
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 2200
+  user_char_limit: 1375
+  nudge_interval: 10
+  flush_min_turns: 6
+
+# Telegram
+telegram:
+  reactions: false
+  channel_prompts: {}
+
+# Platform toolsets
+platform_toolsets:
+  telegram:
+    - browser
+    - clarify
+    - code_execution
+    - cronjob
+    - delegation
+    - file
+    - memory
+    - messaging
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
+  whatsapp:
+    - hermes-whatsapp
+
+# TTS
+tts:
+  provider: edge
+  edge:
+    voice: en-US-AriaNeural
+
+# Cron
+cron:
+  wrap_response: true
+
+# Sessions
+sessions:
+  retention_days: 90
+
+# Display
+display:
+  compact: false
+  personality: ''
+  language: en
+  streaming: true
+  final_response_markdown: strip
+
+# Security
+security:
+  redact_secrets: true
+
+_config_version: 25

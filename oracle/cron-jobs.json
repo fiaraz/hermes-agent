@@ -1,0 +1,228 @@
+{
+  "jobs": [
+    {
+      "id": "86a3e9bcebeb",
+      "name": "Load and run the daily-tutor-lead-scanner skill no",
+      "prompt": "Load and run the daily-tutor-lead-scanner skill now.\n\nSearch for the latest parent and student requests for A-level Chemistry and Biology tutors on:\n- Mumsnet\n- The Student Room\n- Facebook groups (A Level Chemistry Support Group, PHGS Parents Open Forum, Chemistry Tutor, Alevel.chem, and similar)\n\nUse the existing Tavily API key.\n\nDeliver a clean bullet-point list of the strongest current leads with:\n- Thread title\n- Direct link\n- Short note on when it was posted or last active\n\nOnly include direct requests from parents/students. Skip agency and job-board postings.\nSend the final list to Telegram.",
+      "skills": [
+        "daily-tutor-lead-scanner"
+      ],
+      "skill": "daily-tutor-lead-scanner",
+      "model": "deepseek/deepseek-v4-pro",
+      "provider": "openrouter",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * 1",
+        "display": "0 6 * * 1"
+      },
+      "schedule_display": "0 6 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 8
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-01T12:58:38.574572+00:00",
+      "next_run_at": "2026-06-15T06:00:00+00:00",
+      "last_run_at": "2026-06-08T06:07:12.921734+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8148129371",
+        "chat_name": "Fiaraz Iqbal",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": "default"
+    },
+    {
+      "id": "57601f54163d",
+      "name": "daily-education-jobs-scanner",
+      "prompt": "",
+      "skills": [
+        "daily-education-jobs-scanner"
+      ],
+      "skill": "daily-education-jobs-scanner",
+      "model": "deepseek/deepseek-v4-pro",
+      "provider": "openrouter",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * 1",
+        "display": "0 6 * * 1"
+      },
+      "schedule_display": "0 6 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-01T13:02:11.711287+00:00",
+      "next_run_at": "2026-06-15T06:00:00+00:00",
+      "last_run_at": "2026-06-08T06:11:28.041302+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8148129371",
+        "chat_name": "Fiaraz Iqbal",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": "default"
+    },
+    {
+      "id": "8a34a8ed2752",
+      "name": "daily-exam-schedule-2026",
+      "prompt": "Run the daily-exam-schedule skill now and send today's GCSE and A-level Chemistry, Biology, Physics and Maths exams across AQA, Edexcel and OCR to Telegram and email.",
+      "skills": [
+        "daily-exam-schedule"
+      ],
+      "skill": "daily-exam-schedule",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * 1-5",
+        "display": "0 6 * * 1-5"
+      },
+      "schedule_display": "0 6 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-06-08T12:38:34.829976+00:00",
+      "paused_reason": null,
+      "created_at": "2026-06-02T14:56:49.695781+00:00",
+      "next_run_at": "2026-06-09T06:00:00+00:00",
+      "last_run_at": "2026-06-08T06:18:24.448505+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": "platform 'email' not configured/enabled",
+      "deliver": "origin,email:fiaraziqbal@googlemail.com",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8148129371",
+        "chat_name": "Fiaraz Iqbal",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "b8a54d1d58f7",
+      "name": "monthly-paye-reminder",
+      "prompt": "Remind the user today is the 25th of the month and they need to do PAYE for their employees. Keep it brief and direct.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 25 * *",
+        "display": "0 9 25 * *"
+      },
+      "schedule_display": "0 9 25 * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-08T12:39:54.879757+00:00",
+      "next_run_at": "2026-06-25T09:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin,all",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8148129371",
+        "chat_name": "Fiaraz Iqbal",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "32f8ec63d56f",
+      "name": "outreach-reply-tracker",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "outreach-tracker.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "display": "0 10 * * *"
+      },
+      "schedule_display": "0 10 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-09T14:10:47.989153+00:00",
+      "next_run_at": "2026-06-12T10:00:00+00:00",
+      "last_run_at": "2026-06-11T10:00:53.520860+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8148129371",
+        "chat_name": "Fiaraz Iqbal",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-11T10:00:53.521581+00:00"
+}
